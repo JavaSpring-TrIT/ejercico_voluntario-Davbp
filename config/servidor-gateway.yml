@@ -12,19 +12,26 @@ spring:
               allowedMethods: "*"
               allowedHeaders: "*"   
       routes:
-      - id: servCursos #Id de la ruta 
+      - id: servCursos
         uri: lb://servicio-hoteles
         predicates:
           - Path=/shoteles/**
         filters:
           - RewritePath=/shoteles/*, /
           
-      - id: servFormaciones
-        uri: lb://servicio-formaciones 
+      - id: servVuelos
+        uri: lb://servicio-vuelos 
         predicates:
-          - Path=/sformaciones/**
+          - Path=/svuelos/**
         filters:
-          - RewritePath=/sformaciones/*, /      
+          - RewritePath=/svuelos/*, /
+          
+      - id: servReservar
+        uri: lb://servicio-reservas 
+        predicates:
+          - Path=/sreservas/**
+        filters:
+          - RewritePath=/sreservas/*, /          
 server:
   port: 9000
 eureka:
