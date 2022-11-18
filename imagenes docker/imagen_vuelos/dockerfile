@@ -1,0 +1,4 @@
+FROM openjdk:11
+ADD vuelos.jar vuelos.jar
+EXPOSE 7500
+ENTRYPOINT ["java", "-jar", "/vuelos.jar"]

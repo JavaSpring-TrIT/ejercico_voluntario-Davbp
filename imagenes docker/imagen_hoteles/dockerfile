@@ -1,0 +1,4 @@
+FROM openjdk:11
+ADD hoteles.jar hoteles.jar
+EXPOSE 7000
+ENTRYPOINT ["java", "-jar", "/hoteles.jar"]
