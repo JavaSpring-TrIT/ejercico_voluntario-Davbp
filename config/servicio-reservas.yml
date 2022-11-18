@@ -13,7 +13,7 @@ spring:
     pathmatch:
       matching-strategy: ANT_PATH_MATCHER
   application:
-    name: servicio-vuelos
+    name: servicio-reservas
 eureka:
   client:
     serviceUrl:
